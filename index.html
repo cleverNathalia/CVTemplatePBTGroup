@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/fontawesome-free-5.6.3-web/css/all.css">
+
+    <title>CV Template</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+            <div class="navHolder">
+                <img src="img/navPic.gif" class="img-fluid" alt="Responsive image">
+            </div>
+        </nav>
+        <div class="header">
+            <div class="curriculum">
+                <b>CURRICULUM VITAE</b>
+            </div>
+            <b>
+                <i>
+                    <input id="candidateName" class="candidate" type="text" placeholder="Canidate Name">
+                    <div class="candidate" id="candidateNameDone"></div>
+                </i>
+            </b>
+        </div>
+        <hr>
+
+        <!-- EDUCATION -->
+        <section>
+            <div class="sectionHeader">
+                <b>
+                    <u>
+                        EDUCATION
+                    </u>
+                </b>
+            </div>
+            <!-- MATRIC - EDUCATION -->
+            <div id="educationMatric" class="row rowLong"></div>
+
+            <!-- QUALIFICATION - EDUCATION -->
+            <div id="educationQualification" class="row rowLong sectionQualification"></div>
+
+            <!-- ADD QUALIFICATION BUTTON -->
+            <div class="row">
+                <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+                    <div class="sectionHeader">
+                        <div class="btn btn-primary" onclick="addQualification()">Add Qualification</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRAINING - EDUCATION -->
+            <div id="educationTraining" class="row rowLong sectionTraining"></div>
+
+            <!-- ADD TRAINING BUTTON -->
+            <div class="row">
+                <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+                    <div class="sectionHeader">
+                        <div class="btn btn-primary" onclick="addTraining()">Add Training</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <!-- CAREER HISTORY -->
+        <section>
+            <div class="sectionHeader">
+                <b>
+                    <u>
+                        CAREER HISTORY
+                    </u>
+                </b>
+            </div>
+            <!-- HISTORY - CAREER HISTORY -->
+            <div id="careerHistoryHolder" class="sectionCareer"></div>
+        </section>
+
+        <!-- HISTORY - ADD CAREER HISTORY BUTTON -->
+        <div class="row">
+            <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+                <div class="sectionHeader">
+                    <div class="btn btn-primary" onclick="careerHistory()">Add Career History</div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!-- EXPERIENCE / SKILL -->
+        <section>
+            <div class="sectionHeader">
+                <b>
+                    <u>
+                        EXPERIENCE/SKILL
+                    </u>
+                </b>
+            </div>
+
+            <div class="sectionSkill">
+                <!-- EXPERIENCE - KEY SKILL LEVEL -->
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-12 alignLeft">
+                        <div class="sectionHeader">
+                            <b>
+                                Key to skill level:
+                            </b>
+                        </div>
+                    </div>
+                    <!-- INSERT KEY SKILL LEVEL -->
+                    <div id="keySkillLevel" class="col-lg-10 col-md-4 col-sm-12 alignLeft"></div>
+                </div>
+
+                <!-- EXPERIENCE HEADER BAR -->
+                <div id="experienceHeader" class="row skillTab"></div>
+
+                <!-- EXPERIENCE - INDUSTRIES -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 alignLeft skillTabPaddingLeft">
+                        <div class="sectionHeader">
+                            <b>
+                                INDUSTRIES
+                            </b>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INSERTED INDUSTRY -->
+                <div id="insertIndustry"></div>
+
+                <!-- ADD INDUSTRY BUTTON -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+                        <div class="sectionHeader">
+                            <div class="btn btn-primary" onclick="addIndustrySkill()">Add Industry Skill</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADD INDUSTRY POPUP -->
+                <div id="addIndustrySkill" class="modal"></div>
+
+            </div>
+        </section>
+
+        <!-- FINISHED BUTTON -->
+        <div class="col-lg-12 alignCenter marginTop">
+            <div class=" btn btn-primary" onclick="finished()">Finished</div>
+        </div>
+    </div>
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/code.js"></script>
+
+    <!-- EDUCATION JS -->
+    <script src="js/education/matric.js"></script>
+    <script src="js/education/qualification.js"></script>
+    <script src="js/education/training.js"></script>
+
+    <!-- CAREER HISTORY JS -->
+    <script src="js/careerHistory/careerHistory.js"></script>
+    <script src="js/careerHistory/careerHistoryDuties.js"></script>
+
+    <!-- EXPERIENCE JS -->
+    <script src="js/experience/experienceKeySkillLevel.js"></script>
+    <script src="js/experience/experienceHeader.js"></script>
+    <script src="js/addIndustryPopup.js"></script>
+</body>
+
+</html>
