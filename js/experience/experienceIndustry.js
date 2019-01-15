@@ -37,21 +37,31 @@ $(document).ready(function () {
     $("#addIndustrySkill").hide();
     $("#addIndustrySkill").append(
         '<form id="industryForm">' +
-        '<div class="row modal-content-Skill">' +
+        '<div class="modal-content-Skill">' +
+
+        '<div class="row">' +
+        '<div class= "col-lg-3 col-md-12 col-sm-12">Choose an Industry :</div>' +
+        '<div class= "col-lg-3 col-md-12 col-sm-12">Skill :</div>' +
+        '<div class= "col-lg-3 col-md-12 col-sm-12">Years Experience :</div>' +
+        '</div>' +
+
+        '<div class="row">' +
         '<div class= "col-lg-3 col-md-12 col-sm-12">' +
-        'Choose an Industry : ' + '<select class="paddingInput" id="industryType" required>' +
+        '<select class="paddingInput" id="industryType" required>' +
         '</select>' +
         '</div >' +
         '<div class="col-lg-3 col-md-12 col-sm-12">' +
-        'Skill :' + '<input required id="industrySkill" class=" paddingInput " type="number" placeholder="0" min="1" max="5">' +
+        '<input required id="industrySkill" class=" paddingInput " type="number" placeholder="0" min="1" max="5">' +
         '</div>' +
         ' <div class="col-lg-3 col-md-12 col-sm-12 ">' +
-        'Years Experience :' + '<input required id="industryYears" class=" paddingInput " type="number" placeholder="0" min="0" max="50">' +
+        '<input required id="industryYears" class=" paddingInput " type="number" placeholder="0" min="0" max="50">' +
         '</div>' +
         '<div class="col-lg-3 col-md-12 col-sm-12 alignRight">' +
-        '<input type="submit" onclick="addToIndustrySkill()" class="btnAddSkill cursors btn btn-primary" value="Add Skill">' +
+        '<input type="submit" onclick="addToIndustrySkill()" class="btnAddSkill cursors btn btn-primary" value="Add">' +
         '<i onclick="closeIndustrySkill()" class="fas fa-times cursors">' + '</i>' +
         '</div>' +
+        '</div>' +
+
         '</div>' +
         '</form>'
     );

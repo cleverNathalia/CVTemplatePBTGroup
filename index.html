@@ -16,11 +16,11 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+        <div class="navbar navbar-expand-lg navbar-light justify-content-center">
             <div class="navHolder">
                 <img src="img/navPic.gif" class="img-fluid" alt="Responsive image">
             </div>
-        </nav>
+        </div>
         <div class="header">
             <div class="curriculum">
                 <b>CURRICULUM VITAE</b>
@@ -47,28 +47,34 @@
             <div id="educationMatric" class="row rowLong"></div>
 
             <!-- QUALIFICATION - EDUCATION -->
-            <div id="educationQualification" class="row rowLong sectionQualification"></div>
+            <div id="qualificationHeader" class="row rowLong"></div>
+            <div id="educationQualification"></div>
 
             <!-- ADD QUALIFICATION BUTTON -->
             <div class="row">
-                <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+                <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                     <div class="sectionHeader">
-                        <div class="btn btn-primary" onclick="addQualification()">Add Qualification</div>
+                        <div class="btn btn-primary marginOnButtons" onclick="addQualificationPopup()">Add Qualification</div>
                     </div>
                 </div>
             </div>
 
+            <!-- ADD QUALIFICATION POPUP -->
+            <!-- <div id="addQualificationPopup" class="modal"></div> -->
+
             <!-- TRAINING - EDUCATION -->
-            <div id="educationTraining" class="row rowLong sectionTraining"></div>
+            <div id="trainingHeader" class="row rowLong"></div>
+            <div id="educationTraining"></div>
 
             <!-- ADD TRAINING BUTTON -->
             <div class="row">
-                <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+                <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                     <div class="sectionHeader">
-                        <div class="btn btn-primary" onclick="addTraining()">Add Training</div>
+                        <div class="btn btn-primary marginOnButtons" onclick="addTraining()">Add Training</div>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <hr>
@@ -87,9 +93,9 @@
 
         <!-- HISTORY - ADD CAREER HISTORY BUTTON -->
         <div class="row">
-            <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+            <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                 <div class="sectionHeader">
-                    <div class="btn btn-primary" onclick="careerHistory()">Add Career History</div>
+                    <div class="btn btn-primary marginOnButtons" onclick="addCareerHistory()">Add Career History</div>
                 </div>
             </div>
         </div>
@@ -108,7 +114,7 @@
             <div class="sectionSkill">
                 <!-- EXPERIENCE - KEY SKILL LEVEL -->
                 <div class="row">
-                    <div class="col-lg-2 col-md-4 col-sm-12 alignLeft">
+                    <div class="col-lg-2 col-md-2 col-sm-12 alignLeft">
                         <div class="sectionHeader">
                             <b>
                                 Key to skill level:
@@ -116,7 +122,7 @@
                         </div>
                     </div>
                     <!-- INSERT KEY SKILL LEVEL -->
-                    <div id="keySkillLevel" class="col-lg-10 col-md-4 col-sm-12 alignLeft"></div>
+                    <div id="keySkillLevel" class="col-lg-10 col-md-10 col-sm-12 alignLeft"></div>
                 </div>
 
                 <!-- EXPERIENCE HEADER BAR -->
@@ -138,9 +144,9 @@
 
                 <!-- ADD INDUSTRY BUTTON -->
                 <div class="row">
-                    <div class="col-lg-12 col-md-4 col-sm-12 alignCenter">
+                    <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                         <div class="sectionHeader">
-                            <div class="btn btn-primary" onclick="addIndustrySkill()">Add Industry Skill</div>
+                            <div class="btn btn-primary marginOnButtons" onclick="addIndustrySkill()">Add Industry Skill</div>
                         </div>
                     </div>
                 </div>
@@ -152,19 +158,31 @@
         </section>
 
         <!-- FINISHED BUTTON -->
-        <div class="col-lg-12 alignCenter marginTop">
-            <div class=" btn btn-primary" onclick="finished()">Finished</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 alignCenter marginTop">
+            <div class=" btn btn-primary marginOnButtons" onclick="finished()">Finished</div>
         </div>
     </div>
 
+
+    <!-- JQUERY -->
     <script src="jquery/jquery.min.js"></script>
+    <script src="jquery/jquery.js"></script>
+    <link src="jquery/jquery-ui.css"></link>
+    <script src="jquery/jquery-ui.js"></script>
+    <link src="jquery/jquery-ui.structure.css"></link>
+    <link src="jquery/jquery-ui.theme.css"></link>
+
     <script src="popper/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/code.js"></script>
+    <script src="js/finished.js"></script>
 
     <!-- EDUCATION JS -->
     <script src="js/education/matric.js"></script>
+
+    <script src="js/education/qualificationHeader.js"></script>
     <script src="js/education/qualification.js"></script>
+
+    <script src="js/education/trainingHeader.js"></script>
     <script src="js/education/training.js"></script>
 
     <!-- CAREER HISTORY JS -->
@@ -174,7 +192,7 @@
     <!-- EXPERIENCE JS -->
     <script src="js/experience/experienceKeySkillLevel.js"></script>
     <script src="js/experience/experienceHeader.js"></script>
-    <script src="js/addIndustryPopup.js"></script>
+    <script src="js/experience/experienceIndustry.js"></script>
 </body>
 
 </html>
