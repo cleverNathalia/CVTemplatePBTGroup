@@ -51,32 +51,35 @@
 
             <!-- QUALIFICATION - EDUCATION -->
             <div id="qualificationHeader" class="row rowLong"></div>
-            <div id="educationQualification"></div>
+            <div id="insertQualification"></div>
 
             <!-- ADD QUALIFICATION BUTTON -->
-            <div class="row">
+            <div class="row" id="addQualificationButton">
                 <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                     <div class="sectionHeader">
-                        <div class="btn btn-primary marginOnButtons" onclick="addQualificationPopup()">Add Qualification</div>
+                        <div class="btn btn-primary marginOnButtons" onclick="qualification()">Add Qualification</div>
                     </div>
                 </div>
             </div>
 
-            <!-- ADD QUALIFICATION POPUP -->
-            <!-- <div id="addQualificationPopup" class="modal"></div> -->
+            <!-- QUALIFICATION POPUP -->
+            <div id="qualificationPopup" class="modal"></div>
 
             <!-- TRAINING - EDUCATION -->
             <div id="trainingHeader" class="row rowLong"></div>
-            <div id="educationTraining"></div>
+            <div id="insertTraining"></div>
 
             <!-- ADD TRAINING BUTTON -->
-            <div class="row">
+            <div class="row" id="addTrainingButton">
                 <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                     <div class="sectionHeader">
-                        <div class="btn btn-primary marginOnButtons" onclick="addTraining()">Add Training</div>
+                        <div class="btn btn-primary marginOnButtons" onclick="training()">Add Training</div>
                     </div>
                 </div>
             </div>
+
+            <!-- TRAINING POPUP -->
+            <div id="trainingPopup" class="modal"></div>
 
         </section>
 
@@ -95,7 +98,7 @@
         </section>
 
         <!-- HISTORY - ADD CAREER HISTORY BUTTON -->
-        <div class="row">
+        <div class="row" id="addCareerHistoryButton">
             <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                 <div class="sectionHeader">
                     <div class="btn btn-primary marginOnButtons" onclick="addCareerHistory()">Add Career History</div>
@@ -146,7 +149,7 @@
                 <div id="insertIndustry"></div>
 
                 <!-- ADD INDUSTRY BUTTON -->
-                <div class="row">
+                <div class="row"  id="addIndustryButton">
                     <div class="col-lg-12 col-md-12 col-sm-12 alignCenter">
                         <div class="sectionHeader">
                             <div class="btn btn-primary marginOnButtons" onclick="addIndustrySkill()">Add Industry Skill</div>
@@ -161,15 +164,18 @@
         </section>
 
         <!-- FINISHED BUTTON -->
-        <div class="col-lg-12 col-md-12 col-sm-12 alignCenter marginTop">
+        <div class="col-lg-12 col-md-12 col-sm-12 alignCenter marginTop" id="finishButton">
             <div class=" btn btn-primary marginOnButtons" onclick="finished()">Finished</div>
         </div>
+
+        <!-- FINISH POPUP -->
+        <div id="finishPopup" class="modal"></div>
     </div>
 
     <footer class="row rowLong">
-        <div class="col-lg-4 col-md-4 col-sm-12 alignLeft">Name</div>
+        <div class="col-lg-4 col-md-4 col-sm-12 alignLeft" id="footerName">Name</div>
         <div class="col-lg-4 col-md-4 col-sm-12 alignCenter">Confidential</div>
-        <div class="col-lg-4 col-md-4 col-sm-12 alignRight" id="footerRight">Last updated: </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 alignRight" id="footerDate">Last updated: </div>
     </footer>
     <!-- JQUERY -->
     <script src="jquery/jquery.min.js"></script>

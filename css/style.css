@@ -10,6 +10,8 @@ footer{
     height:40px;   /* Height of the footer */
     background-color:#0f243e;
     color: white;
+    font-size: 12px;
+    padding: 10px;
 }
 section{
     margin-left: 14px;
@@ -106,6 +108,17 @@ ul{
     text-align: center;
     margin-left: 60px;
     margin-right: 60px;
+    /* Could be more or less, depending on screen size */
+}
+.modal-content-Finish {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
     /* Could be more or less, depending on screen size */
 }
 .btnAddSkill{
