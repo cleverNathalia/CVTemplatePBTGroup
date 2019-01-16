@@ -54,7 +54,7 @@ $(document).ready(function () {
         '<input required id="industrySkill" class=" paddingInput " type="number" placeholder="0" min="1" max="5">' +
         '</div>' +
         ' <div class="col-lg-3 col-md-12 col-sm-12 ">' +
-        '<input required id="industryYears" class=" paddingInput " type="number" placeholder="0" min="0" max="50">' +
+        '<input required id="industryYears" class=" paddingInput " type="number" placeholder="0" min="1" max="50">' +
         '</div>' +
         '<div class="col-lg-3 col-md-12 col-sm-12 alignRight">' +
         '<input type="submit" onclick="addToIndustrySkill()" class="btnAddSkill cursors btn btn-primary" value="Add">' +

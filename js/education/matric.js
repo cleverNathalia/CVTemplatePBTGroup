@@ -1,14 +1,4 @@
-$(document).ready(function () {
-        $( "#matricYearValue" ).datepicker({
-            changeYear: true,
-            showButtonPanel: true,
-            dateFormat: 'yy',
-            onClose: function(dateText, inst) { 
-                var year = $("#matricYearValue .ui-datepicker-year :selected").val();
-                $(this).datepicker('setDate', new Date(year, 1));
-            }
-        });
-});
+
 $("#educationMatric").append(
     '<div class="col-lg-4 col-md-4 col-sm-12 alignLeft">' +
     '<div class="sectionHeader">' +
@@ -30,7 +20,7 @@ $("#educationMatric").append(
     'YEAR' +
     '</b>' +
     ' <br>' +    
-    '<input id="matricYearValue" class="alignRight paddingInput" type="text" placeholder="What year?">'+
+    '<input id="matricYearValue" class="alignRight paddingInput" type="number" placeholder="Year?" min="1960" max="2019">'+
     '<div id="matricYearValueDone"></div>'+
     '</div>' +
     '</div>'
