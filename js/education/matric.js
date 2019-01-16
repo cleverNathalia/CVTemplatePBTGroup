@@ -6,8 +6,10 @@ $("#educationMatric").append(
     'MATRIC' +
     '</b>' +
     '<br>' +
-    '<input id="matricValue" class="alignLeft paddingInput inputWidth" type="text" placeholder="Where?">' +
-    '<div id="matricValueDone"></div>'+
+    '<form id="matricCheckForm">' +
+    '<input id="matricValue" class="alignLeft paddingInput inputWidth" type="text" placeholder="Where?" required>' +
+    '</form>' +
+    '<div id="matricValueDone"></div>' +
     ' </div>' +
     ' </div>' +
     '<div class="col-lg-4 col-md-4 col-sm-12 alignCenter">' +
@@ -19,9 +21,11 @@ $("#educationMatric").append(
     ' <b>' +
     'YEAR' +
     '</b>' +
-    ' <br>' +    
-    '<input id="matricYearValue" class="alignRight paddingInput" type="number" placeholder="Year?" min="1960" max="2019">'+
-    '<div id="matricYearValueDone"></div>'+
+    ' <br>' +
+    '<form id="matricYearCheckForm">' +
+    '<input id="matricYearValue" class="alignRight paddingInput" type="number" placeholder="Year?" min="1960" max="2019" required>' +
+    '</form>' +
+    '<div id="matricYearValueDone"></div>' +
     '</div>' +
     '</div>'
 );

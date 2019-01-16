@@ -9,32 +9,43 @@ function isNumber(n) {
 }
 
 function finished() {
-  $("#finishPopup").show();
-  $("#finishPopup").append(
-    '<div class="modal-content-Finish">' +
+  var candidateNameValid = document.getElementById('candidateName').validity.valid;
+  var matricValue = document.getElementById('matricValue').validity.valid;
+  var matricYearValue = document.getElementById('matricYearValue').validity.valid;
 
-    '<div class="row alignCenter">' +    
-    '<div class="col-lg-12 col-md-12 col-sm-12 alignCenter marginTop" id="yesFinish">' +
-    'Are you sure?' +
-    '</div>' +
-    '</div>' +
+  if (candidateNameValid === true && matricValue === true && matricYearValue === true) {
+    $("#finishPopup").show();
+    $("#finishPopup").append(
+      '<div class="modal-content-Finish">' +
 
-    '<div class="row">' +
-    '<div class="col-lg-6 col-md-6 col-sm-6 alignRight marginTop" id="yesFinish">' +
-    '<div class=" btn btn-primary marginOnButtons" onclick="yesFinished()">Yes</div>' +
-    '</div>' +
-    '<div class="col-lg-6 col-md-6 col-sm-6 alignLeft marginTop" id="noFinish">' +
-    '<div class=" btn btn-primary marginOnButtons" onclick="noFinished()">No</div>' +
-    '</div>' +
-    '</div>' +
+      '<div class="row alignCenter">' +
+      '<div class="col-lg-12 col-md-12 col-sm-12 alignCenter marginTop" id="yesFinish">' +
+      'Are you sure?' +
+      '</div>' +
+      '</div>' +
 
-    '</div>'+
-    '</form>'
-  );
+      '<div class="row">' +
+      '<div class="col-lg-6 col-md-6 col-sm-6 alignRight marginTop" id="yesFinish">' +
+      '<div class=" btn btn-primary marginOnButtons" onclick="yesFinished()">Yes</div>' +
+      '</div>' +
+      '<div class="col-lg-6 col-md-6 col-sm-6 alignLeft marginTop" id="noFinish">' +
+      '<div class=" btn btn-primary marginOnButtons" onclick="noFinished()">No</div>' +
+      '</div>' +
+      '</div>' +
+
+      '</div>' +
+      '</form>'
+    );
+  } else {
+    document.forms['nameCheckForm'].reportValidity();
+    document.forms['matricCheckForm'].reportValidity();
+    document.forms['matricYearCheckForm'].reportValidity();
+  }
+
 
 }
 
-function yesFinished(){
+function yesFinished() {
   $("#finishPopup").hide();
 
   // CANDIDATE NAME:
@@ -63,7 +74,7 @@ function yesFinished(){
   updateFooter();
 }
 
-function noFinished(){
+function noFinished() {
   $("#finishPopup").hide();
   $("#finishPopup").html("");
 }
